@@ -1,0 +1,50 @@
+** Devastating effects of breaches in computer security: Simulating a chained cyberattack on computers **
+---------------------------------------------------------------------------------------------------------
+
+* Its a program designed to test our system security specifically on windows platforms against cyberattacks like (Ransomware,Keylogger) e.t.c to expose weaknesses in the design of our systems (Windows). 
+It is written in three main programming languages namely :
+$ Python 3
+$ Microsoft Visual C++ (MSVC)
+$ Javascript (NodeJS)
+
+The catch is that most antivirus engines are not good at detecting malicious programs that are not binaries (Machine Language). This means that we can write a script in Python or an 
+interpreted or JIT compiled language like Javscript or Python and the antivirus engine would not be able to detect it. This is because JIT compiled languages rely on an interpreter/JIT compiler 
+to convert the script to be run into machine language and this happens at runtime. So the code cannot be checked unless its run. This makes perfect for malware distributers. This 
+project is to test the truth of this statement.
+
+The malware test is divide into three (3) parts:
+1. Server (nodejs server)
+2. Ransomware (Python3)
+3. Keylogger (Python3)
+4. TCP Reverse-Shell
+5. DNS-cache Poisoner
+
+* Server would hold credentials and script file.
+* C++ compiled executable which acts as a base malware loader.
+* Ransomware is a python script that recursively searches through the directories and encrypts files.
+* Keylogger is a python script installed to the root drive C:\ which upon startup starts and collects keystrokes.
+* TCP Reverse-Shell enables me (the attacker) to run shell commands remotely on the target system.
+* DNS-Cache Poisoner alters, adds or removes entries in the dns cache so that DNS lookups by the operating system will be redirected to
+  attacker controlled websites.
+
+Suggestions would be provided on how to mitigate this effect.
+
+** Building a Windows based debugger in Microsoft Visual C++ **
+---------------------------------------------------------------
+
+* Designing a process based debugger that can launch process from an executable, pause a process to examine the register state and memory and to also list actively executing threads in a 
+  process. It can also attach to an actively executing process to debug it.
+
+* Primary programming language ti be used:
+	* Microsoft Visual C++ (MSVC)
+
+* A process image looks quite like the executable file on disk. The binary file format for the windows is called the portable executable (PE). 
+* A debugger is useful because it enables us diagnose problems with a binary file when it behaves in an unusual way.
+
+
+** Building an anti-virus engine **
+-----------------------------------
+
+* Designing a static analytic anti-virus engine that compares the signatures of malware binaries against a database of know malware 
+  signatures. Signatures are patterns of code in a binary executable that indicates that the nature of the binary is likely to be a malware. These signatures can be obtained from scaning the code section of a binary and matching patterns of program code with that of known malware binaries.
+

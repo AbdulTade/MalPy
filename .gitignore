@@ -1,2 +1,13 @@
-/KeyServer/node_modules/
-keylogger/
+KeyServer/node_modules/
+Malware-Attack-Strategy.sh
+Loader/Loader/x64/Debug/Loader.pdb
+Loader/Loader/.vs/
+Loader/Loader/Debug/
+Loader/Loader/Loader/x64/Debug
+Loader/Loader/Loader/Debug
+Loader/Loader/Loader.sln
+node_modules/
+Loader/Loader/Loader/Loader.*
+KeyServer/Security-Keys/
+Malware-Attack-Strategy.out
+
